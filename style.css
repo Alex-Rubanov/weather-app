@@ -17,12 +17,30 @@ body {
 
 
 .app {
-    width: 50%;
-    height: 70vh;
+    width: 40%;
+    height: 85vh;
     background: url('images/bg-sky.jpg') center center/cover no-repeat;
     background-size: 100% 100vh;
     border-radius: 15px;
        
+}
+
+@media (max-width: 750px) {
+   .app { 
+    width: 50%;
+   }
+}
+
+@media (max-width: 570px) {
+    .app { 
+     width: 60%;
+    }
+}
+
+@media (max-width: 570px) {
+    .app { 
+     width: 80%;
+    }
 }
 
 .app-wrapper {
