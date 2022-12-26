@@ -11,7 +11,6 @@ const locationInput = document.querySelector('.search-box');
 
 
 locationInput.addEventListener('keydown', (e) => {
-
     if (e.keyCode == 13) {
         const location = setLocation(locationInput);
         getResults(location);
@@ -22,9 +21,7 @@ function setLocation(input) {
     const query = input.value;
     input.value = '';
 
-    console.log(query);
-    return query;
-    
+    return query;   
 }
 
 const getResults = async (location) => {
@@ -55,7 +52,7 @@ function dateBuilder(data) {
     const months = ['Janhuary', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Nobember', 'December'];
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday', 'Saturday'];
 
-    let day = days[data.getDay()];
+    const day = days[data.getDay()];
     const date = data.getDate();
     const month = months[data.getMonth()];
     const year = data.getFullYear();
