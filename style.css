@@ -5,6 +5,8 @@
 }
 
 body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Unbounded', cursive;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,13 +19,19 @@ body {
 
 
 .app {
-    width: 40%;
+    width: 35%;
     height: 85vh;
     background: url('images/bg-sky.jpg') center center/cover no-repeat;
     background-size: 100% 100vh;
     border-radius: 15px;
        
 }
+
+@media (max-width: 950px) {
+    .app { 
+     width: 40%;
+    }
+ }
 
 @media (max-width: 750px) {
    .app { 
@@ -80,6 +88,10 @@ main {
     margin-bottom: 15px;
 }
 
+.location-date {
+    font-weight: 200;
+}
+
 .temperature {
     text-align: center;
     color:rgba(255, 255, 255, 0.85);
@@ -87,6 +99,7 @@ main {
 
 .temperature-current {
     font-size: 40px;
+    font-weight: 800;
     color: #fff;
     margin-bottom: 10px;
 }
@@ -95,6 +108,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* .temperature .mix-max {
-    margin-top: 15px;
-} */
+.temperature .min-max {
+    font-weight: 200;
+}
+
