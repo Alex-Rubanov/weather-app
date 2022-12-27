@@ -11,7 +11,6 @@ const locationInput = document.querySelector('.search-box');
 
 
 locationInput.addEventListener('keydown', (e) => {
-
     if (e.keyCode == 13) {
         const location = setLocation(locationInput);
         getResults(location);
@@ -22,9 +21,7 @@ function setLocation(input) {
     const query = input.value;
     input.value = '';
 
-    console.log(query);
-    return query;
-    
+    return query;  
 }
 
 const getResults = async (location) => {
@@ -47,15 +44,15 @@ function displayResults(data) {
     city.innerHTML = `${data.name}, ${data.sys.country}`;
     temperature.innerHTML = `${Math.round(data.main.temp)}&#176c`;
     date.textContent = dateBuilder(now);
-    description.textContent = `${data.weather[0].main}`;
+    description.innerHTML = `${data.weather[0].main}`;
     minmaxTemperature.innerHTML = `${Math.round(data.main.temp_min)}&#176c / ${Math.round(data.main.temp_max)}&#176c`;
 }
 
 function dateBuilder(data) {
-    const months = ['Janhuary', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Nobember', 'December'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'Nobember', 'December'];
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday', 'Saturday'];
 
-    let day = days[data.getDay()];
+    const day = days[data.getDay()];
     const date = data.getDate();
     const month = months[data.getMonth()];
     const year = data.getFullYear();
