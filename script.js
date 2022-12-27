@@ -21,7 +21,9 @@ function setLocation(input) {
     const query = input.value;
     input.value = '';
 
-    return query;  
+    console.log(query);
+    return query;
+    
 }
 
 const getResults = async (location) => {
